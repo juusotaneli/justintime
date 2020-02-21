@@ -8,7 +8,7 @@ import axios from 'axios'
 const baseUrl = 'https://api.digitransit.fi/geocoding/v1/search?text=sup+espoo&lang=fi'
 
 //eficode 60.1693803,24.9236575
-//koti 60.1887008,24.9535068
+//koti 60.188669,24.955619
 
 const ALL_STOPS = gql`
 {
@@ -29,9 +29,10 @@ const ALL_STOPS = gql`
 const ITINERARIES = gql`
 {
   plan(
-    from: {lat: 60.1693803, lon: 24.9236575}
-    to: {lat: 60.1887008, lon: 24.9535068}
-    numItineraries: 20
+    from: {lat: 60.1887008, lon: 24.9535068}
+    to: {lat: 60.1693803, lon: 24.9236575}
+    numItineraries: 20,
+    walkSpeed: 1.7,
   ) {
     itineraries {
       legs {

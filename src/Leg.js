@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import JourneySegments from './JourneySegments'
 
 const Leg = ({ i }) => {
   const [legs, setLegs] = useState([])
@@ -13,8 +14,10 @@ const Leg = ({ i }) => {
           <div key={leg.distance}>
             {leg.trip === null && byFoot(leg)}
             {leg.trip && byVehicle(leg)}
+            
           </div>
         ))}
+        <JourneySegments legs = {legs} />
         <br />
       </div>
     )
