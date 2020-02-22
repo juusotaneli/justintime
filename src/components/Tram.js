@@ -9,7 +9,7 @@ const Tram = ({ leg, percentage }) => {
   }
   return (
     <td style={tramStyle} className='uk-border-pill uk-text-center'>
-      <img src={t} alt='' width='15px'></img> Number {leg.trip.routeShortName}
+      <img src={t} alt='' width='15px'></img> #{leg.trip.routeShortName}
     </td>
   )
 }

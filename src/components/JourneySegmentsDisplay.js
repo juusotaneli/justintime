@@ -27,7 +27,7 @@ const JourneySegmentsDisplay = ({ legs }) => {
               </React.Fragment>
             ))}
           </tr>
-          <tr >
+          <tr className='uk-table uk-width-expand'>
             {legs.map(leg => (
               <React.Fragment key={leg.distance}>
                 {leg.mode.includes('WALK') && (
