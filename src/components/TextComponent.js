@@ -15,7 +15,7 @@ const TextComponent = ({ leg, percentage }) => {
         <p>
           {' '}
           From {leg.from.name} to Work (arrival at{' '}
-          {new Date(leg.startTime).toLocaleString(navigator.language, {
+          {new Date(leg.endTime).toLocaleString(navigator.language, {
             hour: '2-digit',
             minute: '2-digit'
           })}
