@@ -2,7 +2,8 @@ import React from 'react'
 
 const TextComponent = ({ leg, percentage }) => {
   const textStyle = {
-    width: percentage * 100 + '%'
+    width: percentage * 100 + '%',
+
   }
   return (
     <td style={textStyle} className='uk-text-center'>

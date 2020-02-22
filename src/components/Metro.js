@@ -3,8 +3,9 @@ import s from '../subway.png'
 
 const Metro = ({ leg, percentage }) => {
     const metroStyle = {
-      backgroundColor: '#FDCAA9',
-      width: percentage * 100 + '%'
+      backgroundColor: '#e87b7b',
+      width: percentage * 100 + '%',
+      color: 'black'
     }
     return (
       <td style={metroStyle} className='uk-border-pill uk-text-center'>

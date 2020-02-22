@@ -13,7 +13,7 @@ const ITINERARIES = gql`
     plan(
       from: { lat: 60.1887008, lon: 24.9535068 }
       to: { lat: 60.1693803, lon: 24.9236575 }
-      numItineraries: 5
+      numItineraries: 25
       walkSpeed: 1.6
     ) {
       itineraries {

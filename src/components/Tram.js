@@ -3,8 +3,9 @@ import t from '../tram.png'
 
 const Tram = ({ leg, percentage }) => {
   const tramStyle = {
-    backgroundColor: '#e0ffd6',
-    width: percentage * 100 + '%'
+    backgroundColor: '#2fd699',
+    width: percentage * 100 + '%',
+    color: 'black'
   }
   return (
     <td style={tramStyle} className='uk-border-pill uk-text-center'>

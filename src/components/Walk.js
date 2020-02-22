@@ -3,7 +3,7 @@ import w from '../walk.png'
 
 const Walk = ({ leg, percentage }) => {
   const walkStyle = {
-    backgroundColor: '#FDFAA9',
+    backgroundColor: '#eddd85',
     width: percentage * 100 + '%'
   }
   return (

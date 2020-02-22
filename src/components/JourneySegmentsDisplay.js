@@ -15,7 +15,7 @@ const JourneySegmentsDisplay = ({ legs }) => {
 
   return (
     <>
-      <table className='uk-table uk-table-middle' bgcolor="#f2f2f2">
+      <table className='uk-table uk-table-middle uk-width-expand' bgcolor="#f0f0f0">
         <tbody>
           <tr>
             {legs.map(leg => (
