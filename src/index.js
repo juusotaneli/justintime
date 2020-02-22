@@ -14,7 +14,7 @@ const client = new ApolloClient({
 setInterval(() => {
   console.log('rendrr')
   refresh()
-}, 30000)
+}, 300000)
 
 const refresh = () => {
   ReactDOM.render(
