@@ -3,7 +3,7 @@ import t from '../tram.png'
 
 const Tram = ({ leg, percentage }) => {
   const tramStyle = {
-    backgroundColor: '#A9FDC2',
+    backgroundColor: '#d1fac5',
     width: percentage * 100 + '%'
   }
   return (
