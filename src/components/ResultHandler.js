@@ -1,7 +1,8 @@
 import React from 'react'
 import Leg from './Leg'
+import UIKit from 'uikit'
 
-const Itineraries = ({ result }) => {
+const ResultHandler = ({ result }) => {
   if (result.loading) {
     return <div>loading...</div>
   }
@@ -15,4 +16,4 @@ const Itineraries = ({ result }) => {
   )
 }
 
-export default Itineraries
+export default ResultHandler

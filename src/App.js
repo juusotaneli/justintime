@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Query } from 'react-apollo'
 import { gql } from 'apollo-boost'
-import Itineraries from './Itineraries'
+import ResultHandler from './components/ResultHandler'
 
 import axios from 'axios'
 
@@ -10,20 +10,6 @@ const baseUrl = 'https://api.digitransit.fi/geocoding/v1/search?text=sup+espoo&l
 //eficode 60.1693803,24.9236575
 //koti 60.188669,24.955619
 
-const ALL_STOPS = gql`
-{
-  stopsByRadius(lat:60.169, lon:24.923, radius:400) {
-    edges {
-      node {
-        stop {
-          gtfsId
-          name
-        }
-        distance
-      }
-    }
-  }
-}`
   
 
 const ITINERARIES = gql`
@@ -32,12 +18,26 @@ const ITINERARIES = gql`
     from: {lat: 60.1887008, lon: 24.9535068}
     to: {lat: 60.1693803, lon: 24.9236575}
     numItineraries: 20,
-    walkSpeed: 1.7,
+    walkSpeed: 1.6,
   ) {
     itineraries {
       legs {
         startTime
         endTime
+        from {
+          name
+          stop {
+            code
+            name
+          }
+        }
+        to {
+          name
+          stop {
+            code
+            name
+          }
+        }
         mode
         duration
         realTime
@@ -52,10 +52,6 @@ const ITINERARIES = gql`
   }
 }
 `
-const getAll = async () => {
-  const response = await axios.get(baseUrl)
-  return response.data
-}
 
 /* const App = () => {
   return <Query query={query}>
@@ -77,10 +73,9 @@ const getAll = async () => {
 
 const App = () => {
 
-  const [routes, setRoutes] = useState([])
   return (
     <Query query={ITINERARIES}>
-      {(result) => <Itineraries result={result} />}
+      {(result) => <ResultHandler result={result} />}
     </Query>
   )
 }

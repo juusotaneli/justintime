@@ -10,15 +10,7 @@ const Leg = ({ i }) => {
   if (legs.length > 0) {
     return (
       <div>
-        {legs.map(leg => (
-          <div key={leg.distance}>
-            {leg.trip === null && byFoot(leg)}
-            {leg.trip && byVehicle(leg)}
-            
-          </div>
-        ))}
         <JourneySegments legs = {legs} />
-        <br />
       </div>
     )
   }
