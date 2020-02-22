@@ -1,14 +1,13 @@
 import React from 'react'
 import Leg from './Leg'
-import UIKit from 'uikit'
 
 const ResultHandler = ({ result }) => {
-  if (result.loading) {
-    return <div>loading...</div>
-  }
+
   let n = 1
   return (
     <div>
+      <h1>Timetables</h1>
+      {console.log('jou')}
       {result.data.plan.itineraries.map(itineraries => (
         <Leg key={n++} i={itineraries} />
       ))}

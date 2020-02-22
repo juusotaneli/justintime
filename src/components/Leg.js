@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
-import JourneySegments from './JourneySegments'
+import React, { useState, useEffect } from 'react'
+import JourneySegmentsDisplay from './JourneySegmentsDisplay'
 
 const Leg = ({ i }) => {
   const [legs, setLegs] = useState([])
-  if (legs.length === 0) {
-    setLegs(i.legs)
-  }
 
-  if (legs.length > 0) {
-    return (
-      <div>
-        <JourneySegments legs = {legs} />
-      </div>
-    )
-  }
+  useEffect(() => {
+      setLegs(i.legs)
+  }, [i.legs])
+
+  return (
+    <div>
+      <JourneySegmentsDisplay legs={legs} />
+    </div>
+  )
 }
 
 export default Leg
