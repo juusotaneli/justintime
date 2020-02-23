@@ -1,5 +1,5 @@
 import React from 'react'
-const Train = ({ leg, percentage }) => {
+const Train = ({ percentage }) => {
   const busStyle = {
     backgroundColor: '#000000',
     width: percentage * 100 + '%'

@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
-const TextComponent = ({ leg, percentage }) => {
+const TextComponentDisplay = ({ leg, percentage }) => {
   const [start, setStart] = useState('')
   const [destination, setDestination] = useState('')
 
+  //this is here to shorten the super long 'Kauppakorkeakoulut' and 'Rautatieasema' stop names
   useEffect(() => {
     if (leg.to.name.includes('Kauppakorkea')) {
-      setDestination('Kauppikset')
+      setDestination('Kauppakorkeat')
     }
     if (leg.from.name.includes('Kauppakorkea')) {
-      setStart('Kauppikset')
+      setStart('Kauppakorkeat')
     }
     if (leg.to.name.includes('Rautatieasema')) {
       setDestination('Steissi')
@@ -55,4 +56,4 @@ const TextComponent = ({ leg, percentage }) => {
     </td>
   )
 }
-export default TextComponent
+export default TextComponentDisplay

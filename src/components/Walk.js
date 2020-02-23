@@ -1,7 +1,7 @@
 import React from 'react'
 import w from '../walk.png'
 
-const Walk = ({leg,percentage}) => {
+const Walk = ({ percentage }) => {
   const walkStyle = {
     backgroundColor: '#eddd85',
     width: percentage * 100 + '%'

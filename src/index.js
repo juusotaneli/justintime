@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { 
+import {
   ApolloClient, ApolloProvider, HttpLink, InMemoryCache
-} from '@apollo/client' 
-import 'uikit/dist/css/uikit.min.css';
-import 'uikit/dist/js/uikit-icons.min.js';
+} from '@apollo/client'
+import 'uikit/dist/css/uikit.min.css'
+import 'uikit/dist/js/uikit-icons.min.js'
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),

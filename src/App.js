@@ -51,7 +51,7 @@ const ITINERARIES = gql`
 
 /* const App = () => {
   return <Query query={query}>
-    {(result) => { 
+    {(result) => {
       if ( result.loading ) {
         return <div>loading...</div>
       }

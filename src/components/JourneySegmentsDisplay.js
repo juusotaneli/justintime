@@ -4,7 +4,7 @@ import Metro from './Metro'
 import Tram from './Tram'
 import Walk from './Walk'
 import Train from './Train'
-import TextComponent from './TextComponent'
+import TextComponentDisplay from './TextComponentDisplay'
 import TravelTimeDisplay from './TravelTimeDisplay'
 
 const JourneySegmentsDisplay = ({ legs }) => {
@@ -20,7 +20,7 @@ const JourneySegmentsDisplay = ({ legs }) => {
           <tr className='uk-table uk-width-expand'>
             {legs.map(leg => (
               <React.Fragment key={leg.distance}>
-                <TextComponent
+                <TextComponentDisplay
                   leg={leg}
                   percentage={leg.duration / totalDuration}
                 />
