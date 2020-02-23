@@ -9,7 +9,7 @@ All commits to GitHub are run with CircleCI before the changes are deployed in t
 
 Using the JIT-app is very simple - just navigate to Heroku and see the public transport options between my home and my (hopefully) soon-to-be summer work place.
 
-The JIT-app uses GraphQL to fetch the Itinerary data from HSL's GraphQL-API. Displayed itineraries are updated every 30 seconds. In the main itinerary display, journeys are divided into legs based on the type of the transport method. Transport method decides the colour of the bar that represents a single leg (metro is pinkish, bus is blue etc.) The duration of a single leg is displayed in relation to the total duration of the whole journey, meaning that the duration of a single leg defines the size of the bar in relation to other bars.
+The JIT-app uses GraphQL to fetch the Itinerary data from HSL's GraphQL-API. Displayed itineraries are updated every 30 seconds. In the main itinerary display, journeys are divided into legs based on the type of the transport method. The transport method decides the colour of the bar that represents a single leg (metro is pinkish, bus is blue etc.) The duration of a single leg is displayed in relation to the total duration of the whole journey, meaning that the duration of a single leg defines the size of the bar in relation to other bars.
 
 ## Docker
 
