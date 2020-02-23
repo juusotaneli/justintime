@@ -12,6 +12,6 @@ JIT-app uses GraphQL to fetch the Itinerary data from HSL´s GraphQL-API. Displa
 
 If you want to access the Docker image do the following
 
-1. `docker pull juusotaneli/jit-app`
+1. `docker pull juusotaneli/jit-app:1.0`
 2. `docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm juusotaneli/jit-app:1.0`
 3. navigate to `http://localhost:3001` with your browser
