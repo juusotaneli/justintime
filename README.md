@@ -1,6 +1,8 @@
 [![CircleCI](https://circleci.com/gh/juusotaneli/justintime.svg?style=svg&circle-token=6b497b6e8478c7742bda3e2eeaaa91faf772c0e9)](https://circleci.com/gh/juusotaneli/justintime)
 
+## Heroku and CI
 JIT app is on [Heroku](https://justintime-app.herokuapp.com/)
+All commits to GitHub are run with CircleCI before the changes are deployed in to production.
 
 ## How to use
 
