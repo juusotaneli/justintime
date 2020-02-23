@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const TextComponent = ({ leg, percentage }) => {
-  const textStyle = {
-    width: percentage * 100 + '%',
+  const [start, setStart] = useState('')
+  const [destination, setDestination] = useState('')
 
+  useEffect(() => {
+    if (leg.to.name.includes('Kauppakorkea')) {
+      setDestination('Kauppikset')
+    }
+    if (leg.from.name.includes('Kauppakorkea')) {
+      setStart('Kauppikset')
+    }
+    if (leg.to.name.includes('Rautatieasema')) {
+      setDestination('Steissi')
+    }
+    if (leg.from.name.includes('Rautatieasema')) {
+      setStart('Steissi')
+    }
+    if (!start) {
+      setStart(leg.from.name)
+    }
+    if (!destination) {
+      setDestination(leg.to.name)
+    }
+  },[leg.to.name, leg.from.name, start, destination])
+
+  const textStyle = {
+    width: percentage * 100 + '%'
   }
   return (
     <td style={textStyle} className='uk-text-center'>
@@ -11,11 +34,11 @@ const TextComponent = ({ leg, percentage }) => {
         hour: '2-digit',
         minute: '2-digit'
       })}
-      {leg.from.name === 'Origin' && <p>From home to {leg.to.name}</p>}
-      {leg.to.name === 'Destination' && (
+      {start === 'Origin' && <p>From home to {leg.to.name}</p>}
+      {destination === 'Destination' && (
         <p>
           {' '}
-          From {leg.from.name} to Work (arrival at{' '}
+          From {start} to Work (arrival at{' '}
           {new Date(leg.endTime).toLocaleString(navigator.language, {
             hour: '2-digit',
             minute: '2-digit'
@@ -23,10 +46,10 @@ const TextComponent = ({ leg, percentage }) => {
           )
         </p>
       )}
-      {leg.to.name !== 'Destination' && leg.from.name !== 'Origin' && (
+      {destination !== 'Destination' && start !== 'Origin' && (
         <p>
           {' '}
-          From {leg.from.name} to {leg.to.name}{' '}
+          From {start} to {destination}{' '}
         </p>
       )}
     </td>
