@@ -17,7 +17,7 @@ const JourneySegmentsDisplay = ({ legs }) => {
     <>
       <table className='uk-table uk-table-middle uk-width-expand' bgcolor="#f0f0f0">
         <tbody>
-          <tr>
+          <tr className='uk-table uk-width-expand'>
             {legs.map(leg => (
               <React.Fragment key={leg.distance}>
                 <TextComponent
@@ -48,7 +48,7 @@ const JourneySegmentsDisplay = ({ legs }) => {
               </React.Fragment>
             ))}
           </tr>
-          <tr className='uk-table '>
+          <tr className='uk-table uk-width-expand'>
             {legs.map(leg => (
               <React.Fragment key={leg.distance}>
                 <TravelTimeDisplay
