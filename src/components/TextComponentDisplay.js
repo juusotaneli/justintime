@@ -7,10 +7,10 @@ const TextComponentDisplay = ({ leg, percentage }) => {
   //this is here to shorten the super long 'Kauppakorkeakoulut' and 'Rautatieasema' stop names
   useEffect(() => {
     if (leg.to.name.includes('Kauppakorkea')) {
-      setDestination('Kauppakorkeat')
+      setDestination('Kauppakorkea')
     }
     if (leg.from.name.includes('Kauppakorkea')) {
-      setStart('Kauppakorkeat')
+      setStart('Kauppakorkea')
     }
     if (leg.to.name.includes('Rautatieasema')) {
       setDestination('Steissi')
