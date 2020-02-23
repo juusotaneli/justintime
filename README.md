@@ -2,6 +2,7 @@
 
 ## Heroku and CI
 JIT app is on [Heroku](https://justintime-app.herokuapp.com/)
+
 All commits to GitHub are run with CircleCI before the changes are deployed in to production.
 
 ## How to use
