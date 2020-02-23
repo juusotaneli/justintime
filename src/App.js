@@ -69,7 +69,7 @@ const ITINERARIES = gql`
 
 const App = () => {
   const result = useQuery(ITINERARIES, {
-    pollInterval: 300000
+    pollInterval: 30000
   })
   console.log('tää')
   console.log(result)
